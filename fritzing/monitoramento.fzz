@@ -1,0 +1,41 @@
+COMPONENTES:
+- U1: Arduino UNO
+- R1: Resistor 220Ω
+- LED1: LED Vermelho
+- P1: Potenciômetro
+- W: Fios de conexão
+
+CONEXÕES:
+
+[Potenciômetro P1]
+- P1 Terminal 1 → GND (Arduino)
+- P1 Terminal 2 → A0 (Arduino UNO)
+- P1 Terminal 3 → 5V (Arduino UNO)
+
+[LED1]
+- LED1 Anodo (+) → R1 → D8 (Arduino UNO)
+- LED1 Catodo (−) → GND (Arduino UNO)
+
+[Resistor R1]
+- R1 Terminal 1 → Anodo do LED1
+- R1 Terminal 2 → D8 (Arduino UNO)
+
+[Comunicação Serial]
+- USB → Comunicação Serial (para monitoramento e integração MQTT)
+
+[Alimentação]
+- Via cabo USB do Arduino UNO
+
++-----------------------------+
+|          Arduino UNO        |
+|                             |
+| [A0] <---- P1 Terminal 2    |
+| [5V] <---- P1 Terminal 3    |
+| [GND] <---- P1 Terminal 1   |
+|                             |
+| [D8] ----> R1 ----> LED1(+) |
+|                        |    |
+|                      LED1(-)|
+|                        |    |
+|                      [GND]  |
++-----------------------------+
